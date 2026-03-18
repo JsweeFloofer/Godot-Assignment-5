@@ -1,0 +1,12 @@
+Timer
+VBoxContainer
+TextureRect
+Control
+CPUParticles3D
+CollisionShape3D
+Area3D
+CharacterBody3D
+Node3D
+AnimationPlayer
+MeshInstance3D
+Camera3D

@@ -1,0 +1,380 @@
+[gd_scene load_steps=23 format=3 uid="uid://dwfswf5i4fnpn"]
+
+[ext_resource type="Material" uid="uid://d1k4km7nfqana" path="res://Tex/Mats/Template Mat.tres" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://diqyn1l7uvw0s" path="res://Scripts/PlayerMovement.cs" id="2_r0du0"]
+[ext_resource type="Material" uid="uid://c1kpke5bewphx" path="res://Tex/Mats/Template Mat Red.tres" id="3_r0du0"]
+[ext_resource type="Texture2D" uid="uid://2w5atuoskiro" path="res://Tex/Tex/Full Health.png" id="3_trn2v"]
+[ext_resource type="Texture2D" uid="uid://cks6p6h1yagws" path="res://Tex/Tex/2 out of 3.png" id="4_03owx"]
+[ext_resource type="Script" uid="uid://crbswqw3638p3" path="res://Scripts/Enemy.cs" id="4_cm0pq"]
+[ext_resource type="Texture2D" uid="uid://cliq82x1a6ilo" path="res://Tex/Tex/1 out of 3.png" id="5_wkp8b"]
+[ext_resource type="Texture2D" uid="uid://3xra30w6vwep" path="res://Tex/Tex/0 out of 3.png" id="6_20pc6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_uu6xs"]
+sky_top_color = Color(0, 0.46686143, 0.7576551, 1)
+sky_horizon_color = Color(0.44207767, 0.5986395, 0.72827625, 1)
+ground_bottom_color = Color(0, 0.15938592, 0.38713932, 1)
+ground_horizon_color = Color(0.44207767, 0.5986395, 0.72827625, 1)
+
+[sub_resource type="Sky" id="Sky_r0du0"]
+sky_material = SubResource("ProceduralSkyMaterial_uu6xs")
+
+[sub_resource type="Environment" id="Environment_cm0pq"]
+background_mode = 2
+sky = SubResource("Sky_r0du0")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cm0pq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uu6xs"]
+points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fos0i"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3dxm6"]
+points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cm0pq"]
+
+[sub_resource type="Curve" id="Curve_fos0i"]
+_limits = [0.0, 1.0, 0.012295082, 1.0]
+_data = [Vector2(0.012295082, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.04494381), -2.8682249, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_r0du0"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_cm0pq"]
+points = PackedVector3Array(-0.21418296, -0.94802845, -0.4511285, 0.022731654, 0.9521457, 0.49888662, 0.17148845, 0.9519953, 0.46901843, -0.12593445, 0.9526843, -0.48329136, 0.49966258, -0.95367396, -0.0068888306, -0.3876465, -0.9379602, 0.31565303, -0.48329246, 0.9526857, -0.12593003, 0.37509736, 0.9401282, -0.3298157, 0.17148845, -0.9519953, 0.46901843, 0.14078338, -0.9454848, -0.47957912, 0.4690145, 0.9520113, 0.17149934, -0.3876465, 0.9379602, 0.31565303, -0.48329246, -0.9526857, -0.12593003, -0.18351147, -0.9430759, 0.46469846, 0.40741244, -0.9469937, 0.2889825, 0.37509736, -0.9401282, -0.3298157, -0.39515373, 0.9557608, -0.3055234, -0.479555, 0.9454372, 0.1408799, 0.46469817, 0.94309926, -0.18351227, 0.14078338, 0.9454848, -0.47957912, -0.24320284, 0.9459547, 0.43649116, -0.479555, -0.9454372, 0.1408799, 0.2889712, 0.9469877, 0.4074208, -0.39515373, -0.9557608, -0.3055234, -0.006990604, -0.953641, 0.4996576, 0.49966258, 0.95367396, -0.0068888306, -0.27194828, 0.943071, -0.41921657, 0.46469817, -0.94309926, -0.18351227, -0.12593445, -0.9526843, -0.48329136, 0.31564754, 0.93797344, -0.38765055, 0.4690145, -0.9520113, 0.17149934, 0.40741244, 0.9469937, 0.2889825)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fos0i"]
+points = PackedVector3Array(-0.21418296, -0.94802845, -0.4511285, 0.022731654, 0.9521457, 0.49888662, 0.17148845, 0.9519953, 0.46901843, -0.12593445, 0.9526843, -0.48329136, 0.49966258, -0.95367396, -0.0068888306, -0.3876465, -0.9379602, 0.31565303, -0.48329246, 0.9526857, -0.12593003, 0.37509736, 0.9401282, -0.3298157, 0.17148845, -0.9519953, 0.46901843, 0.14078338, -0.9454848, -0.47957912, 0.4690145, 0.9520113, 0.17149934, -0.3876465, 0.9379602, 0.31565303, -0.48329246, -0.9526857, -0.12593003, -0.18351147, -0.9430759, 0.46469846, 0.40741244, -0.9469937, 0.2889825, 0.37509736, -0.9401282, -0.3298157, -0.39515373, 0.9557608, -0.3055234, -0.479555, 0.9454372, 0.1408799, 0.46469817, 0.94309926, -0.18351227, 0.14078338, 0.9454848, -0.47957912, -0.24320284, 0.9459547, 0.43649116, -0.479555, -0.9454372, 0.1408799, 0.2889712, 0.9469877, 0.4074208, -0.39515373, -0.9557608, -0.3055234, -0.006990604, -0.953641, 0.4996576, 0.49966258, 0.95367396, -0.0068888306, -0.27194828, 0.943071, -0.41921657, 0.46469817, -0.94309926, -0.18351227, -0.12593445, -0.9526843, -0.48329136, 0.31564754, 0.93797344, -0.38765055, 0.4690145, -0.9520113, 0.17149934, 0.40741244, 0.9469937, 0.2889825)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_cm0pq"]
+height = 0.26184082
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_fos0i"]
+height = 0.39883423
+radius = 0.7841797
+
+[node name="Node3D" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 666.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_cm0pq")
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+material_override = ExtResource("1_uu6xs")
+mesh = SubResource("PlaneMesh_cm0pq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_uu6xs")
+
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("heartUI", "particles", "iFrames") groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_r0du0")
+Full = ExtResource("3_trn2v")
+Two = ExtResource("4_03owx")
+One = ExtResource("5_wkp8b")
+None = ExtResource("6_20pc6")
+heartUI = NodePath("Control/TextureRect")
+particles = NodePath("Particles")
+iFrames = NodePath("IFrames")
+
+[node name="Body" type="MeshInstance3D" parent="Player"]
+material_override = ExtResource("3_r0du0")
+mesh = SubResource("CapsuleMesh_fos0i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("ConvexPolygonShape3D_3dxm6")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071067, 0, -0.7071067, 0.7071068, 0, 3.201707, 3.1944563)
+
+[node name="Particles" type="CPUParticles3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17008615, 0)
+material_override = ExtResource("3_r0du0")
+emitting = false
+amount = 50
+lifetime = 0.27
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+local_coords = true
+mesh = SubResource("BoxMesh_cm0pq")
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 7.5
+initial_velocity_max = 10.0
+scale_amount_min = 0.1
+scale_amount_max = 0.5
+scale_amount_curve = SubResource("Curve_fos0i")
+color = Color(1, 0, 0, 1)
+
+[node name="Control" type="Control" parent="Player"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Player/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.5
+offset_top = -116.0
+offset_right = 69.5
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_trn2v")
+stretch_mode = 4
+
+[node name="IFrames" type="Timer" parent="Player"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Enemy" type="Node3D" parent="." node_paths=PackedStringArray("player", "timer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8.3)
+script = ExtResource("4_cm0pq")
+player = NodePath("../Player")
+timer = NodePath("Timer")
+detectionDistance = 7.5
+Speed = 2.5
+
+[node name="Weakspot" type="MeshInstance3D" parent="Enemy"]
+transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 1.5, 0, 0.09671077, 0)
+material_override = ExtResource("3_r0du0")
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy/Weakspot"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/Weakspot/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cm0pq")
+
+[node name="Hurtie" type="MeshInstance3D" parent="Enemy"]
+transform = Transform3D(1, 0, 0, 0, 0.145, 0, 0, 0, 1, 0, 0.09671077, 0)
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy/Hurtie"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/Hurtie/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_fos0i")
+
+[node name="KillArea" type="Area3D" parent="Enemy"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/KillArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1775841, 0)
+shape = SubResource("CylinderShape3D_cm0pq")
+
+[node name="DamageArea" type="Area3D" parent="Enemy"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19810647, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy/DamageArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18943788, 0)
+shape = SubResource("CylinderShape3D_fos0i")
+
+[node name="Timer" type="Timer" parent="Enemy"]
+one_shot = true
+
+[node name="Enemy2" type="Node3D" parent="." node_paths=PackedStringArray("player", "timer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.554096, 0, 0.21674347)
+script = ExtResource("4_cm0pq")
+player = NodePath("../Player")
+timer = NodePath("Timer")
+detectionDistance = 7.5
+Speed = 2.5
+
+[node name="Weakspot" type="MeshInstance3D" parent="Enemy2"]
+transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 1.5, 0, 0.09671077, 0)
+material_override = ExtResource("3_r0du0")
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy2/Weakspot"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy2/Weakspot/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cm0pq")
+
+[node name="Hurtie" type="MeshInstance3D" parent="Enemy2"]
+transform = Transform3D(1, 0, 0, 0, 0.145, 0, 0, 0, 1, 0, 0.09671077, 0)
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy2/Hurtie"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy2/Hurtie/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_fos0i")
+
+[node name="KillArea" type="Area3D" parent="Enemy2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy2/KillArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1775841, 0)
+shape = SubResource("CylinderShape3D_cm0pq")
+
+[node name="DamageArea" type="Area3D" parent="Enemy2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19810647, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy2/DamageArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18943788, 0)
+shape = SubResource("CylinderShape3D_fos0i")
+
+[node name="Timer" type="Timer" parent="Enemy2"]
+one_shot = true
+
+[node name="Enemy3" type="Node3D" parent="." node_paths=PackedStringArray("player", "timer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3.3000002)
+script = ExtResource("4_cm0pq")
+player = NodePath("../Player")
+timer = NodePath("Timer")
+detectionDistance = 7.5
+Speed = 2.5
+
+[node name="Weakspot" type="MeshInstance3D" parent="Enemy3"]
+transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 1.5, 0, 0.09671077, 0)
+material_override = ExtResource("3_r0du0")
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy3/Weakspot"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy3/Weakspot/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cm0pq")
+
+[node name="Hurtie" type="MeshInstance3D" parent="Enemy3"]
+transform = Transform3D(1, 0, 0, 0, 0.145, 0, 0, 0, 1, 0, 0.09671077, 0)
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy3/Hurtie"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy3/Hurtie/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_fos0i")
+
+[node name="KillArea" type="Area3D" parent="Enemy3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy3/KillArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1775841, 0)
+shape = SubResource("CylinderShape3D_cm0pq")
+
+[node name="DamageArea" type="Area3D" parent="Enemy3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19810647, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy3/DamageArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18943788, 0)
+shape = SubResource("CylinderShape3D_fos0i")
+
+[node name="Timer" type="Timer" parent="Enemy3"]
+one_shot = true
+
+[node name="Enemy4" type="Node3D" parent="." node_paths=PackedStringArray("player", "timer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -10.3)
+script = ExtResource("4_cm0pq")
+player = NodePath("../Player")
+timer = NodePath("Timer")
+detectionDistance = 7.5
+Speed = 2.5
+
+[node name="Weakspot" type="MeshInstance3D" parent="Enemy4"]
+transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 1.5, 0, 0.09671077, 0)
+material_override = ExtResource("3_r0du0")
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy4/Weakspot"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy4/Weakspot/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cm0pq")
+
+[node name="Hurtie" type="MeshInstance3D" parent="Enemy4"]
+transform = Transform3D(1, 0, 0, 0, 0.145, 0, 0, 0, 1, 0, 0.09671077, 0)
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy4/Hurtie"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy4/Hurtie/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_fos0i")
+
+[node name="KillArea" type="Area3D" parent="Enemy4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy4/KillArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1775841, 0)
+shape = SubResource("CylinderShape3D_cm0pq")
+
+[node name="DamageArea" type="Area3D" parent="Enemy4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19810647, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy4/DamageArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18943788, 0)
+shape = SubResource("CylinderShape3D_fos0i")
+
+[node name="Timer" type="Timer" parent="Enemy4"]
+one_shot = true
+
+[node name="Enemy5" type="Node3D" parent="." node_paths=PackedStringArray("player", "timer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -8.3)
+script = ExtResource("4_cm0pq")
+player = NodePath("../Player")
+timer = NodePath("Timer")
+detectionDistance = 7.5
+Speed = 2.5
+
+[node name="Weakspot" type="MeshInstance3D" parent="Enemy5"]
+transform = Transform3D(1.5, 0, 0, 0, 0.1, 0, 0, 0, 1.5, 0, 0.09671077, 0)
+material_override = ExtResource("3_r0du0")
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy5/Weakspot"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy5/Weakspot/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_cm0pq")
+
+[node name="Hurtie" type="MeshInstance3D" parent="Enemy5"]
+transform = Transform3D(1, 0, 0, 0, 0.145, 0, 0, 0, 1, 0, 0.09671077, 0)
+mesh = SubResource("CylinderMesh_r0du0")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Enemy5/Hurtie"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy5/Hurtie/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_fos0i")
+
+[node name="KillArea" type="Area3D" parent="Enemy5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy5/KillArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1775841, 0)
+shape = SubResource("CylinderShape3D_cm0pq")
+
+[node name="DamageArea" type="Area3D" parent="Enemy5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.19810647, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Enemy5/DamageArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18943788, 0)
+shape = SubResource("CylinderShape3D_fos0i")
+
+[node name="Timer" type="Timer" parent="Enemy5"]
+one_shot = true

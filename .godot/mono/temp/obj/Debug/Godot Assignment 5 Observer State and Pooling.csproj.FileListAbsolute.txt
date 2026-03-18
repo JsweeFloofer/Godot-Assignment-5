@@ -1,0 +1,17 @@
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\bin\Debug\Godot Assignment 5 Observer State and Pooling.deps.json
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\bin\Debug\Godot Assignment 5 Observer State and Pooling.runtimeconfig.json
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\bin\Debug\Godot Assignment 5 Observer State and Pooling.dll
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\bin\Debug\Godot Assignment 5 Observer State and Pooling.pdb
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.csproj.AssemblyReference.cache
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.GeneratedMSBuildEditorConfig.editorconfig
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.AssemblyInfoInputs.cache
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.AssemblyInfo.cs
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.csproj.CoreCompileInputs.cache
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.csproj.CopyComplete
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.dll
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\refint\Godot Assignment 5 Observer State and Pooling.dll
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.pdb
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\Godot Assignment 5 Observer State and Pooling.genruntimeconfig.cache
+D:\Game Thingys\My Games\Godot\Projects\Godot-Assignment-5\.godot\mono\temp\obj\Debug\ref\Godot Assignment 5 Observer State and Pooling.dll
