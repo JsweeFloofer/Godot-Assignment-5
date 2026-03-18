@@ -1,50 +1,97 @@
 using Godot;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics.Tracing;
+using System.Threading;
 
-public partial class PlayerMovement : CharacterBody3D
+public interface IObserver
+{
+    void OnNotify(EventData data);
+}
+
+public class EventData
+{
+    public string EventType;
+    public int HP;
+    public Vector3 pos;
+}
+public class Subject
+{
+    private List<IObserver> observers = new List<IObserver>();
+    public void RegisterObserver(IObserver observer)
+    {
+        observers.Add(observer);
+    }
+
+    public void DeregisterObserver(IObserver observer)
+    {
+        observers.Remove(observer);
+    }
+
+    public void Notify(EventData data)
+    {
+        foreach (var observer in observers)
+        {
+            observer.OnNotify(data);
+        }
+    }
+
+}
+
+
+
+public partial class Player : CharacterBody3D
 {
 	public const float Speed = 5.0f;
 	public const float JumpVelocity = 6.5f;
 
-	[Export]
-	private Texture2D Full;
-    [Export]
-    private Texture2D Two;
-    [Export]
-    private Texture2D One;
-    [Export]
-    private Texture2D None;
-
-    [Export]
-    private TextureRect heartUI;
-
-    [Export]
-	private CpuParticles3D particles;
+    private Subject subject = new Subject();
 
     private int HP = 3;
 
-	[Export]
-	private Timer iFrames;
+    [Export]
+    private Godot.Timer iFrames;
 
+    [Export]
+    private HUD ui;
+
+    [Export]
+    private Particles particles;
+
+
+
+    public void RegisterObserver(IObserver obs)
+    {
+        subject.RegisterObserver(obs);
+    }
+
+    public void OnHit()
+    {
+        if (!iFrames.IsStopped())
+        {
+            return;
+        }
+
+        iFrames.Start();
+        HP--;
+
+        subject.Notify(new EventData
+        {
+            EventType = "IHurtie",
+            HP = HP,
+            pos = Position
+        });
+    }
+
+    public override void _Ready()
+    {
+        RegisterObserver(ui);
+        RegisterObserver(particles);
+
+    }
 
     public override void _PhysicsProcess(double delta)
 	{
-		switch (HP)
-		{
-			case 3:
-				heartUI.Texture = Full;
-				break;
-            case 2:
-				heartUI.Texture = Two;
-                break;
-            case 1:
-				heartUI.Texture = One;
-                break;
-            case 0:
-                heartUI.Texture = None;
-                break;
-        }
-
         Vector3 velocity = Velocity;
 
 		if (HP > 0)
@@ -92,15 +139,5 @@ public partial class PlayerMovement : CharacterBody3D
             }
         }
 		
-	}
-
-	public void OnHit()
-	{
-		if (iFrames.IsStopped())
-		{
-			iFrames.Start();
-            HP--;
-            particles.Emitting = true;
-        }
 	}
 }

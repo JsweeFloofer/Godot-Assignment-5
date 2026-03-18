@@ -1,20 +1,26 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773796161
-icon.svg::CompressedTexture2D::3820186149946154441::1773775587::1773775594::1::::<><><>0<>0<>f0d3a1b370f8e64f32554d9099d6838a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-Main.tscn::PackedScene::8714871002585350967::1773795167::0::1::::<><><>0<>0<><>::uid://d1k4km7nfqana::::res://Tex/Mats/Template Mat.tres<>uid://diqyn1l7uvw0s::::res://Scripts/PlayerMovement.cs<>uid://c1kpke5bewphx::::res://Tex/Mats/Template Mat Red.tres<>uid://2w5atuoskiro::::res://Tex/Tex/Full Health.png<>uid://cks6p6h1yagws::::res://Tex/Tex/2 out of 3.png<>uid://crbswqw3638p3::::res://Scripts/Enemy.cs<>uid://cliq82x1a6ilo::::res://Tex/Tex/1 out of 3.png<>uid://3xra30w6vwep::::res://Tex/Tex/0 out of 3.png
-::res://bin/::1773796146
-::res://Scripts/::1773795108
-Enemy.cs::CSharpScript::5969249155996573422::1773794304::0::1::::<>Node3D<><>0<>0<><>::
-PlayerMovement.cs::CSharpScript::7755284651477141732::1773795108::0::1::::<>CharacterBody3D<><>0<>0<><>::
-::res://Tex/::1773776319
-::res://Tex/Mats/::1773777277
-Template Mat 2.tres::StandardMaterial3D::6204550658609014481::1773777277::0::1::::<><><>0<>0<><>::uid://bwvjmcn17sxg6::::res://Tex/Tex/Placeholder.png
-Template Mat Red.tres::StandardMaterial3D::6619323948835383889::1773777065::0::1::::<><><>0<>0<><>::uid://buoqsp8da1dlm::::res://Tex/Tex/Placeholder Red.png
-Template Mat.tres::StandardMaterial3D::9006595094249933866::1769721530::0::1::::<><><>0<>0<><>::uid://bwvjmcn17sxg6::::res://Tex/Placeholder.png
-::res://Tex/Tex/::1773793552
-0 out of 3.png::CompressedTexture2D::2013802009401082631::1773793548::1773793552::1::::<><><>0<>0<>c850a9ab14267e9854f9edfadd8f8f7a<>res://.godot/imported/0 out of 3.png-d169eaf1ee177acd993235d2cf495a2d.ctex::
-1 out of 3.png::CompressedTexture2D::5562465527363666076::1773793542::1773793552::1::::<><><>0<>0<>87fa68167518b0ea54c93028c7bfe166<>res://.godot/imported/1 out of 3.png-f58c72cdaece9955614c259957456bff.ctex::
-2 out of 3.png::CompressedTexture2D::5513799257274821910::1773793533::1773793552::1::::<><><>0<>0<>5ca3b85db1a5fc4906062105be52a558<>res://.godot/imported/2 out of 3.png-6d294c61ba3bd9f4d2a5a74ee9f1a0c8.ctex::
-Full Health.png::CompressedTexture2D::1942337628099477280::1773793499::1773793552::1::::<><><>0<>0<>c169db6515ce0a7d75cc7f50f5a15c22<>res://.godot/imported/Full Health.png-5dcffe978213366476d62632de24dc12.ctex::
-Placeholder Red.png::CompressedTexture2D::3820103300151267070::1769721084::1773776322::1::::<><><>0<>0<>cfa8221dc2ee9a5f047821e994d09c8a<>res://.godot/imported/Placeholder Red.png-722d8475e8064a8204c92ce240e917ad.s3tc.ctex::
-Placeholder.png::CompressedTexture2D::3974495185380801495::1769531785::1773776322::1::::<><><>0<>0<>29e1e21fb9c33fb55a02473f883ef846<>res://.godot/imported/Placeholder.png-162575935e32fe96fa708e07c96c1cb1.s3tc.ctex::
+::res://::1773835735
+export_presets.cfg::TextFile::-1::1773816265::0::1::::<><><>0<>0<><>::
+icon.svg::CompressedTexture2D::3820186149946154441::1773816265::1773816307::1::::<><><>0<>0<>f0d3a1b370f8e64f32554d9099d6838a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+Main.tscn::PackedScene::8714871002585350967::1773835568::0::1::::<><><>0<>0<><>::uid://d1k4km7nfqana::::res://Tex/Mats/Template Mat.tres<>uid://diqyn1l7uvw0s::::res://Scripts/Player.cs<>uid://c1kpke5bewphx::::res://Tex/Mats/Template Mat Red.tres<>uid://2w5atuoskiro::::res://Tex/Tex/Full Health.png<>uid://cfp0vk1kgscg7::::res://Scripts/Particles.cs<>uid://cks6p6h1yagws::::res://Tex/Tex/2 out of 3.png<>uid://crbswqw3638p3::::res://Scripts/Enemy.cs<>uid://coqvij5sj1g3g::::res://Scripts/HUD.cs<>uid://cliq82x1a6ilo::::res://Tex/Tex/1 out of 3.png<>uid://3xra30w6vwep::::res://Tex/Tex/0 out of 3.png
+::res://bin/::1773816265
+::res://bin/data_Godot Assignment 5 Observer State and Pooling_windows_x86_64/::1773816264
+Godot Assignment 5 Observer State and Pooling.deps.json::JSON::-1::1773816264::0::1::::<><><>0<>0<><>::
+Godot Assignment 5 Observer State and Pooling.runtimeconfig.json::JSON::-1::1773816264::0::1::::<><><>0<>0<><>::
+::res://Scripts/::1773835726
+Enemy.cs::CSharpScript::5969249155996573422::1773834298::0::1::::<>Node3D<><>0<>0<><>::
+HUD.cs::CSharpScript::5789805085468125046::1773835305::0::1::::<>TextureRect<><>0<>0<><>::
+Particles.cs::CSharpScript::5156307244239923620::1773835307::0::1::::<>CpuParticles3D<><>0<>0<><>::
+Player.cs::CSharpScript::7755284651477141732::1773835726::0::1::::<>CharacterBody3D<><>0<>0<><>::
+::res://Tex/::1773816264
+::res://Tex/Mats/::1773816264
+Template Mat 2.tres::StandardMaterial3D::6204550658609014481::1773816264::0::1::::<><><>0<>0<><>::uid://bwvjmcn17sxg6::::res://Tex/Tex/Placeholder.png
+Template Mat Red.tres::StandardMaterial3D::6619323948835383889::1773816264::0::1::::<><><>0<>0<><>::uid://buoqsp8da1dlm::::res://Tex/Tex/Placeholder Red.png
+Template Mat.tres::StandardMaterial3D::9006595094249933866::1773816264::0::1::::<><><>0<>0<><>::uid://bwvjmcn17sxg6::::res://Tex/Placeholder.png
+::res://Tex/Tex/::1773816307
+0 out of 3.png::CompressedTexture2D::2013802009401082631::1773816264::1773816307::1::::<><><>0<>0<>c850a9ab14267e9854f9edfadd8f8f7a<>res://.godot/imported/0 out of 3.png-d169eaf1ee177acd993235d2cf495a2d.ctex::
+1 out of 3.png::CompressedTexture2D::5562465527363666076::1773816264::1773816307::1::::<><><>0<>0<>87fa68167518b0ea54c93028c7bfe166<>res://.godot/imported/1 out of 3.png-f58c72cdaece9955614c259957456bff.ctex::
+2 out of 3.png::CompressedTexture2D::5513799257274821910::1773816264::1773816307::1::::<><><>0<>0<>5ca3b85db1a5fc4906062105be52a558<>res://.godot/imported/2 out of 3.png-6d294c61ba3bd9f4d2a5a74ee9f1a0c8.ctex::
+Full Health.png::CompressedTexture2D::1942337628099477280::1773816264::1773816307::1::::<><><>0<>0<>c169db6515ce0a7d75cc7f50f5a15c22<>res://.godot/imported/Full Health.png-5dcffe978213366476d62632de24dc12.ctex::
+Placeholder Red.png::CompressedTexture2D::3820103300151267070::1773816264::1773816307::1::::<><><>0<>0<>cfa8221dc2ee9a5f047821e994d09c8a<>res://.godot/imported/Placeholder Red.png-722d8475e8064a8204c92ce240e917ad.s3tc.ctex::
+Placeholder.png::CompressedTexture2D::3974495185380801495::1773816264::1773816307::1::::<><><>0<>0<>29e1e21fb9c33fb55a02473f883ef846<>res://.godot/imported/Placeholder.png-162575935e32fe96fa708e07c96c1cb1.s3tc.ctex::

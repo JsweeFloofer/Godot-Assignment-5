@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Godot Assignment 5 Observer State and Pooling")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("ExportDebug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+722491cec7dab414bcb3d3ee6e782040e92d895b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1f687bb20a4be7baa7c0f7d6c0124c18edd8e41")]
 [assembly: System.Reflection.AssemblyProductAttribute("Godot Assignment 5 Observer State and Pooling")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Godot Assignment 5 Observer State and Pooling")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

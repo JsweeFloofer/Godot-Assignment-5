@@ -1,11 +1,13 @@
-[gd_scene load_steps=23 format=3 uid="uid://dwfswf5i4fnpn"]
+[gd_scene load_steps=25 format=3 uid="uid://dwfswf5i4fnpn"]
 
 [ext_resource type="Material" uid="uid://d1k4km7nfqana" path="res://Tex/Mats/Template Mat.tres" id="1_uu6xs"]
-[ext_resource type="Script" uid="uid://diqyn1l7uvw0s" path="res://Scripts/PlayerMovement.cs" id="2_r0du0"]
+[ext_resource type="Script" uid="uid://diqyn1l7uvw0s" path="res://Scripts/Player.cs" id="2_r0du0"]
 [ext_resource type="Material" uid="uid://c1kpke5bewphx" path="res://Tex/Mats/Template Mat Red.tres" id="3_r0du0"]
 [ext_resource type="Texture2D" uid="uid://2w5atuoskiro" path="res://Tex/Tex/Full Health.png" id="3_trn2v"]
+[ext_resource type="Script" uid="uid://cfp0vk1kgscg7" path="res://Scripts/Particles.cs" id="3_wkp8b"]
 [ext_resource type="Texture2D" uid="uid://cks6p6h1yagws" path="res://Tex/Tex/2 out of 3.png" id="4_03owx"]
 [ext_resource type="Script" uid="uid://crbswqw3638p3" path="res://Scripts/Enemy.cs" id="4_cm0pq"]
+[ext_resource type="Script" uid="uid://coqvij5sj1g3g" path="res://Scripts/HUD.cs" id="5_20pc6"]
 [ext_resource type="Texture2D" uid="uid://cliq82x1a6ilo" path="res://Tex/Tex/1 out of 3.png" id="5_wkp8b"]
 [ext_resource type="Texture2D" uid="uid://3xra30w6vwep" path="res://Tex/Tex/0 out of 3.png" id="6_20pc6"]
 
@@ -29,17 +31,17 @@ glow_enabled = true
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uu6xs"]
 points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_fos0i"]
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3dxm6"]
-points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
-
 [sub_resource type="BoxMesh" id="BoxMesh_cm0pq"]
 
 [sub_resource type="Curve" id="Curve_fos0i"]
 _limits = [0.0, 1.0, 0.012295082, 1.0]
 _data = [Vector2(0.012295082, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.04494381), -2.8682249, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_fos0i"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3dxm6"]
+points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_r0du0"]
 
@@ -78,29 +80,8 @@ mesh = SubResource("PlaneMesh_cm0pq")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_uu6xs")
 
-[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("heartUI", "particles", "iFrames") groups=["Player"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-script = ExtResource("2_r0du0")
-Full = ExtResource("3_trn2v")
-Two = ExtResource("4_03owx")
-One = ExtResource("5_wkp8b")
-None = ExtResource("6_20pc6")
-heartUI = NodePath("Control/TextureRect")
-particles = NodePath("Particles")
-iFrames = NodePath("IFrames")
-
-[node name="Body" type="MeshInstance3D" parent="Player"]
-material_override = ExtResource("3_r0du0")
-mesh = SubResource("CapsuleMesh_fos0i")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
-shape = SubResource("ConvexPolygonShape3D_3dxm6")
-
-[node name="Camera3D" type="Camera3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071067, 0, -0.7071067, 0.7071068, 0, 3.201707, 3.1944563)
-
-[node name="Particles" type="CPUParticles3D" parent="Player"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17008615, 0)
+[node name="Particles" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1700861, 0)
 material_override = ExtResource("3_r0du0")
 emitting = false
 amount = 50
@@ -118,8 +99,9 @@ scale_amount_min = 0.1
 scale_amount_max = 0.5
 scale_amount_curve = SubResource("Curve_fos0i")
 color = Color(1, 0, 0, 1)
+script = ExtResource("3_wkp8b")
 
-[node name="Control" type="Control" parent="Player"]
+[node name="HealthUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -133,7 +115,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Player/Control"]
+[node name="Tex" type="TextureRect" parent="HealthUI"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -149,10 +131,32 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_trn2v")
 stretch_mode = 4
+script = ExtResource("5_20pc6")
+Full = ExtResource("3_trn2v")
+Two = ExtResource("4_03owx")
+One = ExtResource("5_wkp8b")
+None = ExtResource("6_20pc6")
 
-[node name="IFrames" type="Timer" parent="Player"]
+[node name="IFrames" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
+
+[node name="Player" type="CharacterBody3D" parent="." node_paths=PackedStringArray("iFrames", "ui", "particles") groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+script = ExtResource("2_r0du0")
+iFrames = NodePath("../IFrames")
+ui = NodePath("../HealthUI/Tex")
+particles = NodePath("../Particles")
+
+[node name="Body" type="MeshInstance3D" parent="Player"]
+material_override = ExtResource("3_r0du0")
+mesh = SubResource("CapsuleMesh_fos0i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("ConvexPolygonShape3D_3dxm6")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 0.7071068, 0.7071067, 0, -0.7071067, 0.7071068, 0, 3.201707, 3.1944563)
 
 [node name="Enemy" type="Node3D" parent="." node_paths=PackedStringArray("player", "timer")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -8.3)
